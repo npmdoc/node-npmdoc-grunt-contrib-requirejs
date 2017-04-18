@@ -1,9 +1,14 @@
-# api documentation for  [grunt-contrib-requirejs (v1.0.0)](https://github.com/gruntjs/grunt-contrib-requirejs#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-requirejs.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-requirejs) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-requirejs.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-requirejs)
+# npmdoc-grunt-contrib-requirejs
+
+#### api documentation for  [grunt-contrib-requirejs (v1.0.0)](https://github.com/gruntjs/grunt-contrib-requirejs#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-requirejs.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-requirejs) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-requirejs.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-requirejs)
+
 #### Optimize RequireJS projects using r.js
 
-[![NPM](https://nodei.co/npm/grunt-contrib-requirejs.png?downloads=true)](https://www.npmjs.com/package/grunt-contrib-requirejs)
+[![NPM](https://nodei.co/npm/grunt-contrib-requirejs.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-contrib-requirejs)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-contrib-requirejs/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-contrib-requirejs_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-contrib-requirejs/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-grunt-contrib-requirejs/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-grunt-contrib-requirejs/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-contrib-requirejs/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-contrib-requirejs/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-grunt-contrib-requirejs/build/screenCapture.npmPackageListing.svg)
 
@@ -69,33 +74,26 @@
     "main": "tasks/requirejs.js",
     "maintainers": [
         {
-            "name": "tkellen",
-            "email": "tyler@sleekcode.net"
+            "name": "tkellen"
         },
         {
-            "name": "cowboy",
-            "email": "cowboy@rj3.net"
+            "name": "cowboy"
         },
         {
-            "name": "shama",
-            "email": "kyle@dontkry.com"
+            "name": "shama"
         },
         {
-            "name": "vladikoff",
-            "email": "vlad@vladikoff.com"
+            "name": "vladikoff"
         },
         {
-            "name": "sindresorhus",
-            "email": "sindresorhus@gmail.com"
+            "name": "sindresorhus"
         },
         {
-            "name": "jmeas",
-            "email": "jellyes2@gmail.com"
+            "name": "jmeas"
         }
     ],
     "name": "grunt-contrib-requirejs",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gruntjs/grunt-contrib-requirejs.git"
@@ -106,16 +104,6 @@
     "version": "1.0.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module grunt-contrib-requirejs](#apidoc.module.grunt-contrib-requirejs)
-
-
-
-# <a name="apidoc.module.grunt-contrib-requirejs"></a>[module grunt-contrib-requirejs](#apidoc.module.grunt-contrib-requirejs)
 
 
 
