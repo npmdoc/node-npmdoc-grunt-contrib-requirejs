@@ -61,12 +61,89 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.grunt-contrib-requirejs">module grunt-contrib-requirejs</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-contrib-requirejs.grunt-contrib-requirejs">
+            function <span class="apidocSignatureSpan"></span>grunt-contrib-requirejs
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.grunt-contrib-requirejs" id="apidoc.module.grunt-contrib-requirejs">module grunt-contrib-requirejs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-contrib-requirejs.grunt-contrib-requirejs" id="apidoc.element.grunt-contrib-requirejs.grunt-contrib-requirejs">
+        function <span class="apidocSignatureSpan"></span>grunt-contrib-requirejs
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">grunt-contrib-requirejs = function (grunt) {
+  &#x27;use strict&#x27;;
+
+  var requirejs = require(&#x27;requirejs&#x27;);
+  var LOG_LEVEL_TRACE = 0, LOG_LEVEL_WARN = 2;
+
+  // TODO: extend this to send build log to grunt.log.ok / grunt.log.error
+  // by overriding the r.js logger (or submit issue to r.js to expand logging support)
+  requirejs.define(&#x27;node/print&#x27;, [], function() {
+    return function print(msg) {
+      if (msg.substring(0, 5) === &#x27;Error&#x27;) {
+        grunt.log.errorlns(msg);
+        grunt.fail.warn(&#x27;RequireJS failed.&#x27;);
+      } else {
+        grunt.log.oklns(msg);
+      }
+    };
+  });
+
+  grunt.registerMultiTask(&#x27;requirejs&#x27;, &#x27;Build a RequireJS project.&#x27;, function() {
+
+    var done = this.async();
+    var options = this.options({
+      logLevel: grunt.option(&#x27;verbose&#x27;) ? LOG_LEVEL_TRACE : LOG_LEVEL_WARN,
+      error: false,
+      done: function(done){
+        done();
+      }
+    });
+    // The following catches errors in the user-defined `done` function and outputs them.
+    var tryCatchDone = function(fn, done, output) {
+      try {
+        fn(done, output);
+      } catch(e) {
+        grunt.fail.warn(&#x27;There was an error while processing your done function: &#x22;&#x27; + e + &#x27;&#x22;&#x27;);
+      }
+    };
+
+    // The following catches errors in the user-defined `error` function and passes them.
+    // if the error function options is not set, this value should be undefined
+    var tryCatchError = function(fn, done, err) {
+      try {
+        fn(done, err);
+      } catch(e) {
+        grunt.fail.fatal(&#x27;There was an error while processing your error function: &#x22;&#x27; + e + &#x27;&#x22;&#x27;);
+      }
+    };
+
+    requirejs.optimize(
+            options,
+            tryCatchDone.bind(null, options.done, done ),
+            options.error ? tryCatchError.bind(null, options.error, done ):undefined
+    );
+
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
